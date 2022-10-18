@@ -1,10 +1,13 @@
 import streamlit as st
 import tensorflow as tf
 import streamlit as st
-
+import gdown
 
 @st.cache(allow_output_mutation=True)
 def load_model():
+  url = 'https://drive.google.com/file/d/1bl0GUexsmr_NLWQ2SM7HeRbmzk_ak_CL/view?usp=sharing'
+  output = 'my_model2.hdf5'
+  gdown.download(url, output, quiet=False)
   model=tf.keras.models.load_model('my_model2.hdf5')
   return model
 with st.spinner('Model is being loaded..'):
