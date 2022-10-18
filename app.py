@@ -5,7 +5,7 @@ import gdown
 
 @st.cache(allow_output_mutation=True)
 def load_model():
-  id = '1bl0GUexsmr_NLWQ2SM7HeRbmzk_ak_CL'
+  id = '1iPGCjcQ-f0pLah9ZWkBAXu175sWL0s5m'
   output = 'my_model2.hdf5'
   gdown.download(id =id,output = output, quiet=False)
   model=tf.keras.models.load_model('my_model2.hdf5')
